@@ -12,6 +12,7 @@ TagManager:
   - block
   - cable
   - lethal
+  - hit zone
   layers:
   - Default
   - TransparentFX

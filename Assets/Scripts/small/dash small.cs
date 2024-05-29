@@ -9,6 +9,8 @@ public class DashSmall : MonoBehaviour
     public float dashSpeed = 10f; // vitesse du dash
 	private SmallMove SmallMoveScript;
 	private int direction;
+    private float timer = 0;
+    private bool CanDash = true;
 
 	void Start()
 	{
@@ -16,11 +18,28 @@ public class DashSmall : MonoBehaviour
 		direction = SmallMoveScript.direction;
 	}
 
+    void Update()
+    {
+        timer += Time.deltaTime;
+        if (timer >= 0.75f)
+        {
+            CanDash = true;
+        }
+        else
+        {
+            CanDash = false;
+        }
+    }
+
     public void HandleSmallDash(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (CanDash == true)
         {
-            StartCoroutine(PerformDash());
+            if (context.performed)
+            {
+                StartCoroutine(PerformDash());
+                timer = 0;
+            }
         }
     }
     IEnumerator PerformDash()
@@ -32,7 +51,7 @@ public class DashSmall : MonoBehaviour
         Vector3 endPosition = transform.position + transform.right * dashDistance * direction;
 
         
-        while (Vector3.Distance(transform.position, endPosition) > 0.1f)
+        while (Vector3.Distance(transform.position, endPosition) > 1f)
         {
             transform.position = Vector3.MoveTowards(transform.position, endPosition, dashSpeed * Time.deltaTime);
             yield return null;

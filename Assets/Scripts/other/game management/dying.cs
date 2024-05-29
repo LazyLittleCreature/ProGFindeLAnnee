@@ -8,11 +8,13 @@ public class dying : MonoBehaviour
     public bool GameOn = true;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("lethal"))
+        if (this.CompareTag("player big") || this.CompareTag("player small"))
         {
-            GameOn = false;
-            Debug.Log("Game over.");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            if (other.CompareTag("lethal"))
+            {
+                GameOn = false;
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
         }
     }
 }

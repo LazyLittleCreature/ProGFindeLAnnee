@@ -30,7 +30,6 @@ public class EnnemyManager : MonoBehaviour
             Vector3 position = spawnZone.transform.position;
             Ennemy instance = Instantiate<Ennemy>(_prefabEnnemies[Random.Range(0, _prefabEnnemies.Count)], position, Quaternion.identity, this.transform);
             
-            instance.IsTouched += EnnemyTouched;
             _Ennemies.Add(instance);
 
             currentSpawnIndex++;
@@ -38,12 +37,4 @@ public class EnnemyManager : MonoBehaviour
         }
     }
 
-    public void EnnemyTouched(Ennemy Ennemy)
-    {
-        if (_Ennemies.Contains(Ennemy))
-        {
-            Debug.Log("Ennemy touched !!!!!!!!!!");
-            _Ennemies.Remove(Ennemy);
-        }
-    }
 }

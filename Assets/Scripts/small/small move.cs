@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 
 public class SmallMove : MonoBehaviour
 {
-    [SerializeField] private float _moveSpeed = 5f;
+    [SerializeField] private float _moveSpeed = 20f;
     
     private float _moveAxis;
     public int direction = 1;
