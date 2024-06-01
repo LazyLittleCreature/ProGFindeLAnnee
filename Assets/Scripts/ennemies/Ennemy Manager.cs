@@ -12,10 +12,12 @@ public class EnnemyManager : MonoBehaviour
     [SerializeField] private float timerSpawn = 3f;
     [SerializeField] public GameObject movePointOne;
     [SerializeField] public GameObject movePointTwo;
-    
+    [SerializeField] public bighitzone hitZoneScript;
     
     private List<Ennemy> _Ennemies = new List<Ennemy>();
     private int currentSpawnIndex = 0;
+    
+    
     
     void Start()
     {
