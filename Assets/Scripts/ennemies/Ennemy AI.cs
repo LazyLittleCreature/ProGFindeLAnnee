@@ -6,7 +6,7 @@ using UnityEngine;
 public class ennemyAI : MonoBehaviour
 {
     private Transform myTransform;
-    private float speed = 5f;
+    [SerializeField] private float speed = 5f;
     private EnnemyManager ennemyManager;
     private Vector3 currentMovePoint;
     private GameObject movePointOne;

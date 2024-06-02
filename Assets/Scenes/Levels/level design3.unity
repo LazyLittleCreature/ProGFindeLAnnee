@@ -238,6 +238,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 921087973609789058, guid: 326c3a24018dd5e45a800ffbc8f662e3, type: 3}
+      propertyPath: spawnZone
+      value: 
+      objectReference: {fileID: 1390317143}
+    - target: {fileID: 921087973609789058, guid: 326c3a24018dd5e45a800ffbc8f662e3, type: 3}
+      propertyPath: '_prefabEnnemies.Array.data[0]'
+      value: 
+      objectReference: {fileID: 3923170025486753765, guid: 4d5334d2c8a7683499a091327ea533f3, type: 3}
     - target: {fileID: 1582812917386638102, guid: 326c3a24018dd5e45a800ffbc8f662e3, type: 3}
       propertyPath: m_Size.x
       value: 1.0611002
@@ -983,6 +991,11 @@ Transform:
 --- !u!4 &1366109772 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5402576503338596468, guid: 326c3a24018dd5e45a800ffbc8f662e3, type: 3}
+  m_PrefabInstance: {fileID: 312543829}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1390317143 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3387173185414797246, guid: 326c3a24018dd5e45a800ffbc8f662e3, type: 3}
   m_PrefabInstance: {fileID: 312543829}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1561750113

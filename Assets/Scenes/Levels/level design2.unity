@@ -371,6 +371,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10, y: 2.220446e-16, z: 10.000001}
   m_Center: {x: -4.656613e-10, y: 0.0000009536743, z: 0}
+--- !u!1 &1065513765 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6985263159635814226, guid: 9f4c5daabd5c664468230ee0fddb58a1, type: 3}
+  m_PrefabInstance: {fileID: 2078372810}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1085142706
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -788,6 +793,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2431804231461411113, guid: 9f4c5daabd5c664468230ee0fddb58a1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.87
+      objectReference: {fileID: 0}
     - target: {fileID: 3557577478518275693, guid: 9f4c5daabd5c664468230ee0fddb58a1, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -800,6 +809,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4843998963909715566, guid: 9f4c5daabd5c664468230ee0fddb58a1, type: 3}
+      propertyPath: spawnZone
+      value: 
+      objectReference: {fileID: 1065513765}
+    - target: {fileID: 4843998963909715566, guid: 9f4c5daabd5c664468230ee0fddb58a1, type: 3}
+      propertyPath: '_prefabEnnemies.Array.data[0]'
+      value: 
+      objectReference: {fileID: 3923170025486753765, guid: 4d5334d2c8a7683499a091327ea533f3, type: 3}
     - target: {fileID: 5463184537680155985, guid: 9f4c5daabd5c664468230ee0fddb58a1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.5
