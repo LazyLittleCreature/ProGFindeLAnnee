@@ -18,7 +18,7 @@ public class ennemyAI : MonoBehaviour
         ennemyManager = GetComponentInParent<EnnemyManager>();
         movePointOne = ennemyManager.movePointOne;
         movePointTwo = ennemyManager.movePointTwo;
-        currentMovePoint = movePointTwo.transform.position;
+        currentMovePoint = movePointOne.transform.position;
         hitZoneScript = ennemyManager.hitZoneScript;
 
     }
@@ -28,17 +28,20 @@ public class ennemyAI : MonoBehaviour
     {
         float step = speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, currentMovePoint, step);
-        if (this.transform.position == movePointTwo.transform.position)
-        {
-            currentMovePoint = movePointOne.transform.position;
-        }
-        else if (this.transform.position == movePointOne.transform.position)
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject == movePointOne)
         {
             currentMovePoint = movePointTwo.transform.position;
         }
-        Debug.Log(hitZoneScript.isHitting);
+        if (other.gameObject == movePointTwo)
+        {
+            currentMovePoint = movePointOne.transform.position;
+        }
     }
-    
+
     void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("hit zone") && hitZoneScript.isHitting)
