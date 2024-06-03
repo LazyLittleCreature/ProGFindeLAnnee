@@ -13,6 +13,7 @@ public class EnnemyManager : MonoBehaviour
     [SerializeField] public GameObject movePointOne;
     [SerializeField] public GameObject movePointTwo;
     [SerializeField] public bighitzone hitZoneScript;
+    [SerializeField] public float ennemySize;
     
     private List<Ennemy> _Ennemies = new List<Ennemy>();
     private int currentSpawnIndex = 0;
@@ -31,6 +32,7 @@ public class EnnemyManager : MonoBehaviour
         {
             Vector3 position = spawnZone.transform.position;
             Ennemy instance = Instantiate<Ennemy>(_prefabEnnemies[Random.Range(0, _prefabEnnemies.Count)], position, Quaternion.identity, this.transform);
+            instance.transform.localScale = new Vector3(ennemySize,ennemySize,ennemySize);
             
             _Ennemies.Add(instance);
 
