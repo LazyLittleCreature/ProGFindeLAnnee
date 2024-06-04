@@ -25,6 +25,14 @@ public class SmallJump : MonoBehaviour
         }
     }
 
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Plateforme"))
+        {
+            CurrentJumpCount = 0;
+        }
+    }
+
     public void HandleSmallJump(InputAction.CallbackContext jumpInput)
     {
         if (jumpInput.performed)
