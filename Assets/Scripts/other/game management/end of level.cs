@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,14 +9,20 @@ public class endOfLevel : MonoBehaviour
     public bool GameOn = true;
     private bool bigPlayerWin = false;
     private bool smallPlayerWin = false;
+    [SerializeField] private Canvas canvas;
 
+    private void Start()
+    {
+        canvas.gameObject.SetActive(false);
+    }
 
     void Update()
     {
         if (bigPlayerWin == true && smallPlayerWin == true)
         {
             GameOn = false;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            // SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            canvas.gameObject.SetActive(true);
         }
     }
     
