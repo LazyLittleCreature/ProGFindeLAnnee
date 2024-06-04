@@ -14,6 +14,7 @@ public class SmallJump : MonoBehaviour
     private void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
+        _jumpForce = _jumpForce * 1000;
     }
 
     void OnCollisionEnter(Collision collision)

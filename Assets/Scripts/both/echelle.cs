@@ -121,24 +121,25 @@ using UnityEngine.InputSystem;
 
 public class echelle : MonoBehaviour
 {
+    [SerializeField] private float multiplier = 1;
     public float tailleEchelle;
     public float offset = 0.6f;
-    public float climbSpeed = 10f;
+    public float climbSpeed = 2f;
     private bool canClimb = false;
     private bool canGoDown = false;
     private bool isClimbing = false;
     private bool isGoingDown = false;
     private Vector3 targetPosition;
     private Rigidbody rb;
+    private float middleOfLadder;
 
     [SerializeField] private Collider playerCollider;
-    [SerializeField] public bigpush target;
+    //[SerializeField] public bigpush target;
 
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        
         if (rb == null)
         {
             Debug.LogError("Rigidbody component not found!");
@@ -149,14 +150,17 @@ public class echelle : MonoBehaviour
     {
         if (other.CompareTag("Echelle"))
         {
-            tailleEchelle = other.gameObject.transform.localScale.y; //other.gameObject.GetComponent<Renderer>().bounds.size.y * 
-            if (transform.position.y <= other.gameObject.transform.position.y)
+            tailleEchelle = other.gameObject.transform.localScale.y;
+            middleOfLadder = other.gameObject.transform.position.y + (tailleEchelle / 2);
+            if (transform.position.y <= middleOfLadder)
             {
+                
                 canClimb = true;
                 canGoDown = false;
             }
-            if (transform.position.y > other.gameObject.transform.position.y)
+            if (transform.position.y > middleOfLadder)
             {
+                
                 canGoDown = true;
                 canClimb = false;
             }
@@ -174,9 +178,14 @@ public class echelle : MonoBehaviour
 
     public void HandleClimbEchelle(InputAction.CallbackContext context)
     {
+        if (context.performed)
+        {
+           
+        }
         if (context.performed && canClimb)
         {
-            targetPosition = transform.position + transform.up * (tailleEchelle + offset);
+            
+            targetPosition = transform.position + transform.up * (tailleEchelle + offset) * multiplier;
             isClimbing = true;
             playerCollider.isTrigger = true;
         }
@@ -191,7 +200,7 @@ public class echelle : MonoBehaviour
     {
         if (context.performed && canGoDown)
         {
-            targetPosition = transform.position + transform.up * (tailleEchelle - offset) * -1;
+            targetPosition = transform.position + transform.up * (tailleEchelle - offset) * -1 * multiplier;
             isGoingDown = true;
             playerCollider.isTrigger = true;
         }

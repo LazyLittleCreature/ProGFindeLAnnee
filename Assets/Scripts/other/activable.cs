@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class activableladder : MonoBehaviour
+public class activable : MonoBehaviour
 { 
     void Start()
     {

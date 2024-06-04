@@ -10,11 +10,13 @@ public class BigJump : MonoBehaviour
     [SerializeField] private int MaxJump = 1;
     private int CurrentJumpCount = 0;
     private Rigidbody _rigidbody;
-    [SerializeField] public bigpush target;
+    private bigpush target;
 
     private void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
+		target = this.GetComponent<bigpush>();
+		_jumpForce = _jumpForce * 1000;
     }
 
     void OnCollisionEnter(Collision collision)

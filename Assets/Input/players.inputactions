@@ -51,6 +51,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "big hit",
+                    "type": "Button",
+                    "id": "564fa3fe-9d99-4f08-b2b5-c300296307c1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "small jump",
                     "type": "Button",
                     "id": "3c0039b3-6bcd-4a2d-8091-99acf8dc7f99",
@@ -103,15 +112,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "big hit",
-                    "type": "Button",
-                    "id": "564fa3fe-9d99-4f08-b2b5-c300296307c1",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -130,6 +130,17 @@
                     "name": "",
                     "id": "3abdc1d2-6298-4ea4-89be-4e29ca1d6c28",
                     "path": "<Gamepad>/rightStick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "big jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "02ee62c4-0830-43d9-83cd-08343238ae7f",
+                    "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -205,6 +216,39 @@
                 },
                 {
                     "name": "",
+                    "id": "211430be-764a-4fd1-8217-a2bc903c6d87",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "big move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "4a3a386a-85ec-433e-a318-0cab8211bc5e",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "big move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "56f28690-c5d7-416e-b2b6-c1508abb97d0",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "big move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
                     "id": "aa44ba18-e673-4df4-9704-e97461905d9a",
                     "path": "<Gamepad>/dpad/up",
                     "interactions": "",
@@ -218,6 +262,17 @@
                     "name": "",
                     "id": "63a9066e-7e39-4326-96f9-7f485c7b5c8b",
                     "path": "<Gamepad>/leftStick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "small jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "86721cbe-3b84-4ecf-8d7e-5ae32598d848",
+                    "path": "<Keyboard>/upArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -292,9 +347,53 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "1D Axis",
+                    "id": "b09bdad5-a6dd-465c-8416-2166e0ec3061",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "small move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "be73202c-db17-41f5-95f6-4209b4dd4917",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "small move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "4d521534-a529-4ccc-b6d5-e246e9c71dbd",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "small move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "",
                     "id": "e295fe8a-87fa-441b-b004-61c4c70479cc",
                     "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "small dash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d522bce1-5f2a-42b2-babc-fe102c0cfb95",
+                    "path": "<Keyboard>/numpad1",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -315,8 +414,30 @@
                 },
                 {
                     "name": "",
+                    "id": "555e3bed-b2ed-4180-b812-cc92cc651f4e",
+                    "path": "<Keyboard>/numpad0",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "small climb",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "4722e7ac-c110-43e3-a79a-c0bd3e55d438",
                     "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "big climb",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a49abd06-2056-4d90-87a7-ee9f518f754e",
+                    "path": "<Keyboard>/z",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -337,8 +458,30 @@
                 },
                 {
                     "name": "",
+                    "id": "bd8ac9c2-85c8-44e8-9a8b-91cb6713fb6f",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "small go down",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "9bf39551-4357-4a18-b0d1-c39028f1e13f",
                     "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "big go down",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4dd017ae-c618-4bb3-9ed2-bb3d12e1d688",
+                    "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -359,6 +502,17 @@
                 },
                 {
                     "name": "",
+                    "id": "9cae60e2-b93e-40d6-a749-dcbeecf7c833",
+                    "path": "<Keyboard>/numpad2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "small activate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "ebc58dce-aac1-4fa8-98ed-ef730ece4767",
                     "path": "<Gamepad>/rightShoulder",
                     "interactions": "",
@@ -370,8 +524,30 @@
                 },
                 {
                     "name": "",
+                    "id": "a2b73b1f-540a-4dd2-9313-1d65c6b64789",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "big push",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "4435af8c-447b-4fbb-b52f-e4c7120978f8",
                     "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "big hit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cecee4e4-e916-4e11-b3f8-029ee096a674",
+                    "path": "<Keyboard>/q",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

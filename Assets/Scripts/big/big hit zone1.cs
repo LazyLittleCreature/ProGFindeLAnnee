@@ -21,7 +21,7 @@ public class bighitzone : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.transform.position = bigPlayer.transform.position + (new Vector3(1.5f, 0, 0) * bigMoveScript.direction);
+        this.transform.position = bigPlayer.transform.position + (new Vector3(0,62.5f,0)) + (new Vector3(75f, 0, 0) * bigMoveScript.direction);
         counter -= Time.deltaTime;
     }
 
