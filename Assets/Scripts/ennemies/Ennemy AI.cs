@@ -40,6 +40,18 @@ public class ennemyAI : MonoBehaviour
         {
             currentMovePoint = movePointOne.transform.position;
         }
+
+        if (other.gameObject.CompareTag("block"))
+        {
+            if (currentMovePoint == movePointTwo.transform.position)
+            {
+                currentMovePoint = movePointOne.transform.position;
+            }
+            if (currentMovePoint == movePointOne.transform.position)
+            {
+                currentMovePoint = movePointTwo.transform.position;
+            }
+        }
     }
 
     void OnTriggerStay(Collider other)

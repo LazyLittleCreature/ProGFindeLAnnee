@@ -5,14 +5,14 @@ using UnityEngine.InputSystem;
 
 public class smallactivate : MonoBehaviour
 {
-    public bool isActivating = false;
+    public bool isActivating = true;
     public void HandleActivateSmall(InputAction.CallbackContext context)
     {
         if (context.performed)
         {
             isActivating = true;
         }
-        else if(context.canceled)
+        if(context.canceled)
         {
             isActivating = false;
         }

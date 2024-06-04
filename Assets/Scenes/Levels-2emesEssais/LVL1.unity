@@ -399,10 +399,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04e52ca2d7aaaaf4ea2479b7e1e703c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  multiplier: 1
-  tailleEchelle: 0
+  multiplier: 50
+  tailleEchelle: 4
   offset: 0.6
-  climbSpeed: 100000
+  climbSpeed: 1000
   playerCollider: {fileID: 208657589}
 --- !u!114 &208657587
 MonoBehaviour:
@@ -610,7 +610,7 @@ ConstantForce:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3298705156396351544}
   m_Enabled: 1
-  m_Force: {x: 0, y: -200, z: 0}
+  m_Force: {x: 0, y: -150, z: 0}
   m_RelativeForce: {x: 0, y: 0, z: 0}
   m_Torque: {x: 0, y: 0, z: 0}
   m_RelativeTorque: {x: 0, y: 0, z: 0}
@@ -1713,7 +1713,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 79997496114729374}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 081c242a5e132754593ff5c2d9d265b6, type: 3}
   m_Name: 
@@ -1750,7 +1750,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 2
@@ -4774,7 +4774,7 @@ Transform:
   m_GameObject: {fileID: 7086179220734071810}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18.4, y: 6.88, z: 45.1}
+  m_LocalPosition: {x: -10, y: 6.82, z: 45.1}
   m_LocalScale: {x: 2.22, y: 2.22, z: 2.22}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -6153,7 +6153,7 @@ Transform:
   m_GameObject: {fileID: 3298705156396351544}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 52.1, y: 22.6, z: 45.1}
+  m_LocalPosition: {x: 44.3, y: 28.3, z: 45.1}
   m_LocalScale: {x: 7.2, y: 7.2, z: 7.2}
   m_ConstrainProportionsScale: 0
   m_Children:
