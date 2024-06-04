@@ -11,5 +11,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels-2emesEssais/LVL1.unity
     guid: cd7917d0d3b44e34686a8c6f1fd8bbed
+  - enabled: 1
+    path: Assets/Scenes/UI/Settings.unity
+    guid: 28470796727dbed418350eee14162dd1
+  - enabled: 1
+    path: Assets/Scenes/UI/credits.unity
+    guid: 82da38662f499da4b80f71faff37fc53
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
