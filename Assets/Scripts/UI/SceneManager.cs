@@ -6,8 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public bool isClicked = false;
+    
     public void ChangeScene(string _sceneName)
     {
+        isClicked = true;
         SceneManager.LoadScene(_sceneName);
     }
 
