@@ -6,7 +6,8 @@ public class SwitchAndButton : MonoBehaviour
 {
     [SerializeField] private smallactivate SmallPlayer;
     [SerializeField] private GameObject target;
-    void OnTriggerEnter(Collider other)
+
+    void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("player small"))
         {

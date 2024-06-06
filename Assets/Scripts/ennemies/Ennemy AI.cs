@@ -2,16 +2,18 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ennemyAI : MonoBehaviour
 {
     private Transform myTransform;
-    [SerializeField] private float speed = 5f;
+    [SerializeField] private float speed;
     private EnnemyManager ennemyManager;
     private Vector3 currentMovePoint;
     private GameObject movePointOne;
     private GameObject movePointTwo;
     private bighitzone hitZoneScript;
+    private string currentSceneName;
     
     void Start()
     {
@@ -20,6 +22,7 @@ public class ennemyAI : MonoBehaviour
         movePointTwo = ennemyManager.movePointTwo;
         currentMovePoint = movePointOne.transform.position;
         hitZoneScript = ennemyManager.hitZoneScript;
+        currentSceneName = SceneManager.GetActiveScene().name;
 
     }
     
@@ -28,6 +31,14 @@ public class ennemyAI : MonoBehaviour
     {
         float step = speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, currentMovePoint, step);
+        if (currentSceneName == "LVL1")
+        {
+            speed = 125;
+        }
+        else if (currentSceneName == "LVL2")
+        {
+            speed = 25;
+        }
     }
 
     private void OnTriggerEnter(Collider other)

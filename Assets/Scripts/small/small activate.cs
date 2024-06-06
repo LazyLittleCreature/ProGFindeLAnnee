@@ -11,10 +11,12 @@ public class smallactivate : MonoBehaviour
         if (context.performed)
         {
             isActivating = true;
+			Debug.Log("the small robot is activating");
         }
         if(context.canceled)
         {
             isActivating = false;
+			Debug.Log("the small robot stoped activating");
         }
     }
 }
