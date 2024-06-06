@@ -6,12 +6,7 @@ using UnityEngine;
 public class MusicAndSoundsPlayer : MonoBehaviour
 {
     public AudioSource srcMusic;
-    public AudioSource srcSFX;
     public AudioClip mainMenuMusic;
-    public AudioClip settingsButton;
-    public AudioClip returnButton;
-    public AudioClip quitButton;
-    public AudioClip playButton;
     public static MusicAndSoundsPlayer instance;
     private void Awake()
     {
@@ -39,29 +34,5 @@ public class MusicAndSoundsPlayer : MonoBehaviour
         {
             srcMusic.Play();
         }
-    }
-
-    public void SettingsButtonClick()
-    {
-        srcSFX.clip = settingsButton;
-        srcSFX.Play();
-    }
-    
-    public void ReturnButtonClick()
-    {
-        srcSFX.clip = returnButton;
-        srcSFX.Play();
-    }
-    
-    public void QuitButtonClick()
-    {
-        srcSFX.clip = quitButton;
-        srcSFX.Play();
-    }
-    
-    public void PlayButtonClick()
-    {
-        srcSFX.clip = playButton;
-        srcSFX.Play();
     }
 }
