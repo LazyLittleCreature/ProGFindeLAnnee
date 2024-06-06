@@ -13,6 +13,9 @@ TagManager:
   - cable
   - lethal
   - hit zone
+  - MusicMenu
+  - VolumeBar
+  - VolumeButton
   layers:
   - Default
   - TransparentFX
